@@ -80,7 +80,7 @@ public class PlayerInputPC : MonoBehaviour
 			return;
 
 		//If the player presses the SwitchAttack input axis, tell the attack script to switch weapons
-		if (Input.GetButtonDown("SwitchAttack"))
+		if (Input.GetButtonDown("Switch Attack"))
 		{
 			playerAttack.SwitchAttack();
 		}

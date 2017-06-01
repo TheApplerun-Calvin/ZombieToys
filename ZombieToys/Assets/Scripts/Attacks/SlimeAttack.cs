@@ -47,11 +47,11 @@ public class SlimeAttack : MonoBehaviour
 			return;
 
 		//Grab the current position of the mouse
-		targetPosition = MouseLocation.Instance.MousePosition;
+		targetPosition = MouseLocation.Instance.MousePosition-new Vector3(0,0.5f,0);
 		//Create a RaycastHit variable
 		RaycastHit hit;
 		//Cast a ray from the mouse's position straight up along the Y axis. If the raycast hits something record it as the target 
-		if (Physics.Raycast(targetPosition, Vector3.up, out hit, 2f, whatIsShootable))
+		if (Physics.Raycast(targetPosition, Vector3.up, out hit, 3f, whatIsShootable))
 			target = hit.transform;
 
 		UpdateReticule();
